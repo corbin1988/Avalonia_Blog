@@ -1,0 +1,12 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="clr-namespace:Avalonia_Blog.ViewModels"
+             x:Class="Avalonia_Blog.Views.PostView"
+             x:DataType="vm:PostViewModel">
+    <StackPanel HorizontalAlignment="Center"
+                VerticalAlignment="Center">
+        <TextBlock Text="Currently on:" />
+        <TextBlock Text="{Binding PostId, StringFormat='Post: {0}'}" />
+        <Button Content="Go Back" Command="{Binding GoBack}" />
+    </StackPanel>
+</UserControl>
