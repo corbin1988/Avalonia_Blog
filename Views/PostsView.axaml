@@ -1,0 +1,14 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="clr-namespace:Avalonia_Blog.ViewModels"
+             x:Class="Avalonia_Blog.Views.PostsView"
+             x:DataType="vm:PostsViewModel">
+    <StackPanel HorizontalAlignment="Center"
+                VerticalAlignment="Center">
+        <TextBlock Text="Currently on:" />
+        <TextBlock Text="{Binding UrlPathSegment} view" /> 
+        <Button Content="Go to login" Command="{Binding GoToLogin}" />
+        <Button Content="Post 1" Command="{Binding GoToPost}" CommandParameter="1" />
+        <Button Content="Post 2" Command="{Binding GoToPost}" CommandParameter="2" />
+    </StackPanel>
+</UserControl>
