@@ -7,6 +7,8 @@
                 VerticalAlignment="Center">
         <TextBlock Text="Currently on:" />
         <TextBlock Text="{Binding PostId, StringFormat='Post: {0}'}" />
+        <TextBlock Text="{Binding Post.Title}" />
+        <TextBlock Text="{Binding Post.Content}" />
         <Button Content="Go Back" Command="{Binding GoBack}" />
     </StackPanel>
 </UserControl>
