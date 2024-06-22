@@ -1,0 +1,15 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="clr-namespace:Avalonia_Blog.ViewModels"
+             x:Class="Avalonia_Blog.Views.CreatePostView"
+             x:DataType="vm:CreatePostViewModel">
+    <StackPanel HorizontalAlignment="Center"
+                VerticalAlignment="Center">
+        <TextBlock Text="Create A Post" />
+        <TextBox Text="{Binding Title}" />
+        <TextBox Text="{Binding Content}" />
+        <TextBox Text="{Binding Author}" />
+        <Button Content="Create Post" Command="{Binding CreatePost}" /> 
+        <Button Content="Go Back" Command="{Binding GoBack}" />
+    </StackPanel>
+</UserControl>
