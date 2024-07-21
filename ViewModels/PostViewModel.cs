@@ -3,6 +3,8 @@ using Avalonia_Blog.ViewModels;
 using Avalonia_Blog.Services;
 using ReactiveUI;
 using Avalonia_Blog.Models;
+using System;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace Avalonia_Blog.ViewModels;
 public class PostViewModel : ViewModelBase, IRoutableViewModel
@@ -13,7 +15,7 @@ public class PostViewModel : ViewModelBase, IRoutableViewModel
 
     public ReactiveCommand<Unit, IRoutableViewModel> GoBack => HostScreen.Router.NavigateBack;
 
-    private readonly PostService _postService;
+    private readonly IPostService _postService;
 
     public Post Post  { get; set; }
 
@@ -23,7 +25,7 @@ public class PostViewModel : ViewModelBase, IRoutableViewModel
     {
         HostScreen = screen;
         PostId = postId;
-        _postService = new PostService();
+       _postService =  Program.ServiceProvider.GetRequiredService<IPostService>();
 
         Post = _postService.GetPost(postId)!;
     }

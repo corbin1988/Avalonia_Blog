@@ -10,12 +10,11 @@
         <TextBlock Text="{Binding UrlPathSegment} view" />
         <Button Content="Go to login"
                 Command="{Binding GoToLogin}" />
-                <Button Content="Post with ID 1"
-                            Command="{Binding GoToPost}"
-                            CommandParameter="1"/>
+        <Button Content="Create A Post"
+                Command="{Binding GoToCreatePost}"/>
         <ItemsControl ItemsSource="{Binding Posts}">
             <ItemsControl.ItemTemplate>
-                <DataTemplate> 
+                <DataTemplate>
                     <controls:PostRow Post="{Binding}" />
                 </DataTemplate>
             </ItemsControl.ItemTemplate>

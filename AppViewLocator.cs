@@ -13,6 +13,7 @@ public class AppViewLocator : ReactiveUI.IViewLocator
     RegisterViewModel context => new RegisterView { DataContext = context },
     PostsViewModel context => new PostsView { DataContext = context },
     PostViewModel context => new PostView { DataContext = context },
+    CreatePostViewModel context => new CreatePostView { DataContext = context },
     _ => throw new ArgumentOutOfRangeException(nameof(viewModel))
   };
 }
