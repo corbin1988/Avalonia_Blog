@@ -4,6 +4,8 @@ using Avalonia.Markup.Xaml;
 using Avalonia_Blog.ViewModels;
 using Avalonia_Blog.Views;
 using Microsoft.Extensions.DependencyInjection;
+using HotAvalonia;
+
 
 namespace Avalonia_Blog;
 
@@ -11,6 +13,7 @@ public partial class App : Application
 {
     public override void Initialize()
     {
+        this.EnableHotReload();
         AvaloniaXamlLoader.Load(this);
     }
 
